@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rota Optimizasyonu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBahEuFx8gqQxziDfz_9JRQAIM3evoR8Sw&libraries=places&callback=initAutocomplete" async defer></script>
+</head>
+<body>
+    <h1>Rota Optimizasyonu</h1>
+    <p>Durakları girin ve en kısa rotayı hesaplayın.</p>
+
+    <input id="locationInput" type="text" placeholder="Durak ekleyin">
+    <button onclick="addLocation()">Ekle</button>
+
+    <ul id="locationList"></ul>
+
+    <button onclick="calculateRoute()">En Kısa Rotayı Bul</button>
+
+    <h2>Sonuç:</h2>
+    <p id="result"></p>
+
+    <!-- GPT Entegrasyonu -->
+    <input type="text" id="chatInput" placeholder="GPT'ye soru sor..." style="width: 80%;">
+    <button onclick="askGPT()">Gönder</button>
+    <p id="chatResponse"></p>
+
+    <div id="map" style="width: 100%; height: 400px;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
